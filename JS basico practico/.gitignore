@@ -1,0 +1,4 @@
+# ignore all imagenes .svg, .jpg, .gif
+*.svg
+*.jpg
+*.gif
