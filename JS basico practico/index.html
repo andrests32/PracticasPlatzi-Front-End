@@ -12,9 +12,18 @@
 <body>
     <h1 class="verde "">Manipulacion del DOM</h1>
 
-    <p>Esto es un parrafo</p>
-    <p class="parrafito">Esto es un parrafo con clase</p>
-    <p id="pid">Esto es un parrafo con clase ID</p>
+   <input id="Calculo1" placeholder="Escribe algo aqui" />
+
+
+<!-- ///UTILIZAMOS EL ATRIBUTO onchange="console.log(`Cambio el input`) como ejemplo para saber si cambio el input al momento que el usuario realizo el ingreso de caratacteres dentro del input a este se le llama escuchar al DOM -->
+   <!-- <input onchange="console.log(`Cambio el input`)" id="Calculo2" placeholder="Escribe algo aqui" />  -->
+
+   <input id="Calculo2" placeholder="Escribe algo aqui" /> 
+
+
+<!-- DE IGUAL MANERA LO UTILIZAMOS CON ONCLICK COMO ESTA EN EL EJEMPLO DE ABAJO SE UTILIZA PARA SABER CUANTAS VECES EL USURARIO REALIZO CLICK SOBRE EL BOTON CALCULAR -->
+
+   <button id="btnCalcular" onclick="btnOnClick()" >Calcular</button>
     
 <input placeholder="Write somthing here" value=""/>
     <Script src="./indexJS.js"></Script>
