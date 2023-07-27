@@ -45,15 +45,63 @@
 // // // 
 // // // 
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// // SEGUNDA CLASE DE MANIPULACION DEL DOM////home/andrests/Escritorio/JS basico practico.
+// // SEGUNDA CLASE DE MANIPULACION DEL DOM CON ESCUCHAR LOS EVENTOS DE LOS USURIOS UTILIZANDO LOS VALUES DE CADA UNO DE LAS ETIQUETAS..
 
-const h1 =document.querySelector(`h1`);
-const input1 = document.querySelector(`#calculo1`);
-const input2 = document.querySelector(`#calculo2`);
-const btn = document.querySelector(`#btnCalcular`);
+// const h1 = document.querySelector(`h1`);
+// const input1 = document.querySelector(`#calculo1`);
+// const input2 = document.querySelector(`#calculo2`);
+// const btn = document.querySelector(`#btnCalcular`);
+// const pResult = document.querySelector(`#result`);
 
-function btnOnClick(){
-    console.log(input1.value + input2.value);
+// function btnOnClick() {
+//   const sumaInputs = input1.value + input2.value;  ///Si queremos hacer que estos dos valores no se concatenen tenemos opciones como (number o parseInt) estos nos ayudan a comvertios los string en numeros cada uno tiene una propiedad que se debe tomar en cuenta para cambiar antes a numero ,,, Tenemos una nueva opcion que se usa anteponiendo el signo + antes para que se conviertan en numero se la conoce como unitaryPlus es con el signo mas + (const sumaInputs = +input1.value  +input2.value;) de este modo se sumaran como una operacion matematica..
+//   pResult.innerText ="Resultado: " +  sumaInputs;
+// } 
+
+/////////////////////////////////////////////////////////////////////////
+// ESTA CLASE SE TRATA DE UNA NUEVA FUNCION LLAMADA (addEventListener) 
+
+const h1 = document.querySelector(`h1`);
+const form = document.querySelector(`#form`);
+const inputC1 = document.querySelector(`#Calc1`);
+const inputC2 = document.querySelector(`#Calc2`);
+const btn = document.querySelector(`#btnCalculos`)
+const pResultado = document.querySelector(`#resultado`);
+
+
+//ESTE EJEMPLO NOS SIRVE PARA addEventListener///
+
+// btn.addEventListener(`click`, butOnClick); //PARA HACER QUE (addEventListener) FUNCIONE CORRECTAMENTE DENTRO DE LOS PARAMETROS YA NO COLOCAMOS LOS () DE NUESTRA FUNCION , POR QUE addEventListener LO HACE POR DEFECTO SI AGREAMOS LOS () ESTARIAMOS DICIENDO QUE EJECUTE UNA FUNCION QUE YA FUE EJECUTADA..
+
+// function butOnClick () {
+//     const sumaInpts = inputC1.value + inputC2.value;
+//     pResultado.innerText = "RESULTADO: " + sumaInpts;
+// }
+
+////AHORA HAREMOS EL MISMO PERO CON UN FORMULARIO/// NOTA: IMPORTANTE CUANDO UTILIZAMOS FORMULARIO ESTA ETIQUETA LO QUE HACE ES QUE EL ULTIMO BOTON QUE HAYA DENTRO DE NUESTRO CODIGO LO CONVIERTA EN UN SUMMIT ES COMO UN EFECTO DE QUE LA PAGINA SOLITA SE ESTE RECARGANDO O REFRESCANDO ESTO ES POR DEFECTO.
+
+
+/////ESTE ES UN METODO PARA PREVENIR QUE LA PAGINA SE RECARGUE//
+// form.addEventListener(`submit`, sumarInputValues);
+
+// function sumarInputValues(event) {
+//     console.log({event});
+//     event.preventDefault(); ///CUANDO COLOCAMOS EL event.preventDefault(); HACEMOS QUE LA PAGINA NO SE RECARGUE DEBIDO AL DEFAULT DE FORMULARIO COMO SE MENCIONA ARRIBA. 
+//     const sumaInpts = inputC1.value + inputC2.value;
+//     pResultado.innerText = "RESULTADO: " + sumaInpts;
+// }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////// ESTE ES UN PROCESO MAS CORTO EN DONDE DECLARAMOS QUE LA ETIQUETA DE BUTTON DE HTML SE DE TIPO BOTON COMO EN EL SIGUENTE EJEMPLO (<button type="button" id="btnCalculos">Calcular</button>) ES DECIR LE ESTAMOS ASIGNANDO  type="button" LO QUE SE INTERPRETA QUE YA NO DEBE HACER SUBMIT OSEA RECARGARSE LA PAGINA CUANDO TOMA POR DEFAUL EL ULTIMO BOTON POR DEFAULT..
+
+btn.addEventListener(`click`, sumarInputValues);
+
+function sumarInputValues() {
+        
+    const sumaInpts = inputC1.value + inputC2.value;
+    pResultado.innerText = "RESULTADO: " + sumaInpts;
 }
 
- 
+
+
+
+

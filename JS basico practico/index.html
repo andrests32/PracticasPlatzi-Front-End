@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,23 +10,58 @@
 </head>
 
 <body>
-    <h1 class="verde "">Manipulacion del DOM</h1>
+    <h1>Manipulacion del DOM</h1>
 
    <input id="Calculo1" placeholder="Escribe algo aqui" />
 
 
-<!-- ///UTILIZAMOS EL ATRIBUTO onchange="console.log(`Cambio el input`) como ejemplo para saber si cambio el input al momento que el usuario realizo el ingreso de caratacteres dentro del input a este se le llama escuchar al DOM -->
-   <!-- <input onchange="console.log(`Cambio el input`)" id="Calculo2" placeholder="Escribe algo aqui" />  -->
+    ///UTILIZAMOS EL ATRIBUTO onchange="console.log(`Cambio el input`) como ejemplo para saber si cambio el input al momento que el usuario realizo el ingreso de caratacteres dentro del input a este se le llama escuchar al DOM -->
+    <!-- <input onchange="console.log(`Cambio el input`)" id="Calculo2" placeholder="Escribe algo aqui" />  -->
 
-   <input id="Calculo2" placeholder="Escribe algo aqui" /> 
+    <!-- <input id="Calculo2" placeholder="Escribe algo aqui" /> -->
 
 
-<!-- DE IGUAL MANERA LO UTILIZAMOS CON ONCLICK COMO ESTA EN EL EJEMPLO DE ABAJO SE UTILIZA PARA SABER CUANTAS VECES EL USURARIO REALIZO CLICK SOBRE EL BOTON CALCULAR -->
+    <!-- DE IGUAL MANERA LO UTILIZAMOS CON ONCLICK COMO ESTA EN EL EJEMPLO DE ABAJO SE UTILIZA PARA SABER CUANTAS VECES EL USURARIO REALIZO CLICK SOBRE EL BOTON CALCULAR -->
+<!-- 
+    <button id="btnCalcular" onclick="btnOnClick()" >Calcular</button>
 
-   <button id="btnCalcular" onclick="btnOnClick()" >Calcular</button>
-    
-<input placeholder="Write somthing here" value=""/>
+    <p id="result"></p> -->
+
+    <!-- <input placeholder="Write somthing here" value="" /> -->
+<!-- 
     <Script src="./indexJS.js"></Script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion Basica del DOM</title>
+    <link rel="stylesheet" href="./indexEstilo.css">
+</head>
+
+<body>
+
+    <form id="form">
+
+        <h1>Manipulacion basica del DOM</h1>
+
+        <input id="Calc1" placeholder="Escribe algo aqui" />
+        <input id="Calc2" placeholder="Escribe algo aqui" />
+        <button type="button" id="btnCalculos">Calcular</button>
+
+        <p id="resultado"></p>
+
+    </form>
+
+    <script src="./indexJS.js"></script>
+
 </body>
 
 </html>
